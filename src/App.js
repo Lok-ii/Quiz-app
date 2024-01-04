@@ -42,7 +42,7 @@ function App() {
     <>
       {questionNumber <= 10 ? (
         <div className="App">
-          <h1 className="heading">Quiz App</h1>
+          <h1 className="heading">Quiz App </h1>
           <div className="questionContainer">
             {questionArray.map((item, idx) => {
               if (idx === questionNumber - 1) {

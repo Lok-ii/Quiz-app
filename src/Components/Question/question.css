@@ -1,0 +1,27 @@
+.question{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 25%;
+}
+
+.quesContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.ans{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
