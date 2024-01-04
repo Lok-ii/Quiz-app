@@ -79,7 +79,7 @@ function App() {
       ) : (
         <div className="quizEnded">
           <p className="endHeading">Quiz Ended</p>
-          <p className="score">{correctCount} / 10</p>
+          <p className="score">Your Score: {correctCount} / 10</p>
         </div>
       )}
     </>

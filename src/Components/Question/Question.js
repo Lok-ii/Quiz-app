@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./question.css";
 
 const decodeHtmlEntities = (htmlString) => {
-  const textarea = document.createElement('textarea');
+  const textarea = document.createElement("textarea");
   textarea.innerHTML = htmlString;
   return textarea.value;
 };
@@ -33,21 +33,26 @@ const Question = (props) => {
   return (
     <div className="question">
       <div className="quesContainer">
-        <p className="questionNumber">Q {props.number}.</p>
-        <p className="quesStatement" dangerouslySetInnerHTML={{ __html: decodeHtmlEntities(props.question["question"]) }}></p>
+        <p className="questionNumber">Question {props.number}.</p>
+        <p
+          className="quesStatement"
+          dangerouslySetInnerHTML={{
+            __html: decodeHtmlEntities(props.question["question"]),
+          }}
+        ></p>
       </div>
       <ul className="options">
         {optionsArray.map((option, index) => {
           return (
-            <button
-              key={index}
-              className="ans"
-              disabled={props.disabled}
-              onClick={updateQuestion}
-              dangerouslySetInnerHTML={{ __html: decodeHtmlEntities(option) }}
-            >
-              
-            </button>
+            <li>
+              <button
+                key={index}
+                className="ans"
+                disabled={props.disabled}
+                onClick={updateQuestion}
+                dangerouslySetInnerHTML={{ __html: decodeHtmlEntities(option) }}
+              ></button>
+            </li>
           );
         })}
       </ul>
