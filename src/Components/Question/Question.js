@@ -50,6 +50,7 @@ const Question = (props) => {
                 className="ans"
                 disabled={props.disabled}
                 onClick={updateQuestion}
+                style={{background: props.back}}
                 dangerouslySetInnerHTML={{ __html: decodeHtmlEntities(option) }}
               ></button>
             </li>

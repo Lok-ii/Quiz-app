@@ -8,6 +8,11 @@ function App() {
   const [questionNumber, setNumber] = useState(1);
   const [disabled, setDisabled] = useState(false);
   const [correctCount, setCorrectCount] = useState(0);
+  const [backgroundC, setBackground] = useState(`linear-gradient(
+    to top,
+    rgb(162, 171, 88, 0.7),
+    rgb(99, 99, 99,0.7)
+  )`)
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -38,6 +43,22 @@ function App() {
     };
   }, [time]);
 
+  useEffect(()=>{
+    if(disabled){
+      setBackground(`linear-gradient(
+        to top,
+        rgb(162, 171, 88, 0.3),
+        rgb(99, 99, 99, 0.2)
+      )`);
+    }else{
+      setBackground(`linear-gradient(
+        to top,
+        rgb(162, 171, 88, 0.7),
+        rgb(99, 99, 99,0.7)
+      )`);
+    }
+  })
+
   return (
     <>
       {questionNumber <= 10 ? (
@@ -57,6 +78,7 @@ function App() {
                     count={correctCount}
                     setCorrectCount={setCorrectCount}
                     setTime={setTime}
+                    back={backgroundC}
                   />
                 );
               }
