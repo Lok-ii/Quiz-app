@@ -16,7 +16,7 @@ const Question = (props) => {
         return ans;
       });
       const correctAns = props.question["correct_answer"];
-      const randomIndex = Math.floor(Math.random() * 5);
+      const randomIndex = Math.floor(Math.random() * 4);
       optTemp.splice(randomIndex, 0, correctAns);
       return optTemp;
     });
