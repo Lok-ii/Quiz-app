@@ -12,7 +12,7 @@ function App() {
     to top,
     rgb(162, 171, 88, 0.7),
     rgb(99, 99, 99,0.7)
-  )`)
+  )`);
 
   useEffect(() => {
     const fetchQuestions = async () => {
@@ -43,21 +43,21 @@ function App() {
     };
   }, [time]);
 
-  useEffect(()=>{
-    if(disabled){
+  useEffect(() => {
+    if (disabled) {
       setBackground(`linear-gradient(
         to top,
         rgb(162, 171, 88, 0.3),
         rgb(99, 99, 99, 0.2)
       )`);
-    }else{
+    } else {
       setBackground(`linear-gradient(
         to top,
         rgb(162, 171, 88, 0.7),
         rgb(99, 99, 99,0.7)
       )`);
     }
-  })
+  });
 
   return (
     <>
